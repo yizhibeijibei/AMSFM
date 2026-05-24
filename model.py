@@ -348,12 +348,12 @@ class AMSFM(nn.Module):
                  stocks,
                  time_steps, 
                  channels, 
-                 market, 
-                 scale, 
+                 market_1,
+                 market_2,
                  patch_len_list=(2, 4, 8, 16),
                  ie_hid=None,
-                 dropout=0.0,
-                 k_select=2):
+                 dropout,
+                 k_select):
         super(StockMixer, self).__init__()
 
         self.time_steps = time_steps
