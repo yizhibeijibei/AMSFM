@@ -321,7 +321,7 @@ class MultiScaleRWKVBranch(nn.Module):
 # NoGraphMixer
 # ==========================================================
 class NoGraphMixer(nn.Module):
-    def __init__(self, stocks, hidden_dim=20):
+    def __init__(self, stocks, hidden_dim):
         super(NoGraphMixer, self).__init__()
         self.dense1 = nn.Linear(stocks, hidden_dim)
         self.activation = nn.Hardswish()
@@ -370,12 +370,12 @@ class AMSFM(nn.Module):
         )
 
         self.channel_fc_a = nn.Linear(channels, 1)
-        self.stock_mixer_a = NoGraphMixer(stocks=stocks, hidden_dim=market)
+        self.stock_mixer_a = NoGraphMixer(stocks=stocks, hidden_dim=market_1)
         self.time_fc_a = nn.Linear(time_steps, 1)
         self.time_fc_a_ = nn.Linear(time_steps, 1)
 
         self.channel_fc_b = nn.Linear(channels, 1)
-        self.stock_mixer_b = NoGraphMixer(stocks=stocks, hidden_dim=market)
+        self.stock_mixer_b = NoGraphMixer(stocks=stocks, hidden_dim=market_2)
         self.time_fc_b = nn.Linear(time_steps, 1)
         self.time_fc_b_ = nn.Linear(time_steps, 1)
 
