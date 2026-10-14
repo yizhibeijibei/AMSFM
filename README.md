@@ -8,12 +8,5 @@ torch~=2.0.0
 numpy~=1.24.0
 
 pandas, tqdm, matplotlib
-# Dataset and Preprocessing
-
-NASDAQ/NYSE: Temporal Relational Ranking for Stock Prediction (Feng et al., 2019).
-We use the processed opening price, closing price, highest price, lowest price, and trading volume as five features
-S&P500: Efficient Integration of Multi-Order Dynamics and Internal Dynamics in Stock Movement Prediction (Huynh et al., 2022).
-We collect and process data from Yahoo Finance.
-
 # code
-Currently, the core code of the model has been made public for submission purposes, and all the code will be released after the paper is accepted.
+All source codes are currently under sorting & refactoring.The complete code will be uploaded to this repository once the arrangement is finished.
